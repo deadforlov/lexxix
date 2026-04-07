@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои ссылки</title>
+    <style>
+        /* Сброс стилей и настройка фона */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        .background {
+            /* ЗАМЕНИТЕ ссылку в url() на прямую ссылку вашей картинки-фона */
+            background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* Темный полупрозрачный слой, чтобы кнопка ярче выделялась на фоне */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        /* Контейнер для контента (поверх фона) */
+        .content {
+            z-index: 2;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        /* Если захотите добавить аватарку, раскомментируйте код в HTML ниже */
+        .avatar {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 3px solid #00AFF0;
+            margin-bottom: 30px;
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(0, 175, 240, 0.5);
+        }
+
+        /* Завораживающая, байтовая кнопка OnlyFans */
+        .of-btn {
+            display: block;
+            width: 100%;
+            padding: 20px 0;
+            font-size: 22px;
+            font-weight: 800;
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 40px;
+            background: linear-gradient(45deg, #00AFF0, #007bb5, #00AFF0);
+            background-size: 200% auto;
+            box-shadow: 0 0 25px rgba(0, 175, 240, 0.7), inset 0 0 10px rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+            /* Анимация пульсации и переливания цвета */
+            animation: pulse 1.5s infinite, gradientMove 3s infinite linear;
+            border: 2px solid transparent;
+        }
+
+        /* Эффект при наведении/нажатии */
+        .of-btn:hover, .of-btn:active {
+            transform: scale(1.08);
+            box-shadow: 0 0 40px rgba(0, 175, 240, 1), inset 0 0 20px rgba(255,255,255,0.6);
+            border: 2px solid #ffffff;
+            color: #ffffff;
+        }
+
+        /* Анимация постоянного увеличения-уменьшения (байт на клик) */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.04); }
+            100% { transform: scale(1); }
+        }
+
+        /* Анимация движения градиента */
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background">
+        <div class="overlay"></div> 
+        
+        <div class="content">
+            <a href="https://onlyfans.com/lexyy_grey/c176" class="of-btn">
+                🔥 OnlyFans 🔥
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
